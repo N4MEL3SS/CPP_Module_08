@@ -84,7 +84,7 @@ int main()
 	std::cout << "Except 3: " << std::endl;
 	try
 	{
-		std::cout << "Longest span: " << sp5.longestSpan() << std::endl;
+		sp5.longestSpan();
 	}
 	catch (std::exception &err)
 	{
