@@ -4,14 +4,17 @@
 
 int main()
 {
-	Span span(6);
-	span.addNumber(1);
-	span.addNumber(22);
-	span.addNumber(43);
-	std::cout << span.longestSpan() << std::endl;
-	std::cout << span.shortestSpan() << std::endl;
+	Span sp = Span(5);
 
-	std::cout << std::endl;
+	sp.addNumber(6);
+	sp.addNumber(3);
+	sp.addNumber(17);
+	sp.addNumber(9);
+	sp.addNumber(11);
+
+	std::cout << "Subject:" << std::endl;
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
 
 	srand(time(NULL));
 	std::vector<int> randNum;
@@ -27,18 +30,19 @@ int main()
 	std::cout << "Longestest span: " << spanBig.longestSpan() << std::endl;
 	std::cout << std::endl;
 
-	Span sp = Span(15000);
+	Span sp1 = Span(15000);
 	for (int i = 0; i < 15000; i++)
-		sp.addNumber(i);
+		sp1.addNumber(i);
 
 	std::cout << "Iterate:" << std::endl;
-	std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
-	std::cout << "Longestest span: " << sp.longestSpan() << std::endl;
+	std::cout << "Shortest span: " << sp1.shortestSpan() << std::endl;
+	std::cout << "Longestest span: " << sp1.longestSpan() << std::endl;
 	std::cout << std::endl;
 
 	Span sp2 = Span(15000);
-	std::vector<int>::iterator a = sp.getVector().begin();
-	std::vector<int>::iterator b = sp.getVector().end();
+
+	std::vector<int>::iterator a = sp1.getVector().begin();
+	std::vector<int>::iterator b = sp1.getVector().end();
 	sp2.addNumber(a, b);
 
 	std::cout << "Operator = : " << std::endl;
