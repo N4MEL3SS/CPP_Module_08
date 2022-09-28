@@ -29,6 +29,9 @@ Span &Span::operator = (const Span &toCopy)
 
 void Span::addNumber(int num)
 {
+	if (this->_size == 0)
+		throw Span::SpanIsNullException();
+
 	if (_v.size() == _size)
 		throw Span::SpanIsFullException();
 
